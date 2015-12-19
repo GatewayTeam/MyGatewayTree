@@ -46,6 +46,7 @@ namespace DemoGitHub.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var user = await UserManager.FindAsync(model.UserName, model.Password);
                 if (user != null)
                 {
